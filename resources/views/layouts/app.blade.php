@@ -1,36 +1,40 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
+<html lang="en">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ini Judul</title>	
+	<style>
+		select, textarea, input {
+			margin: 0.5rem 0;
+		}
+		td, th {
+			border: 1px solid lightgray;
+			padding: 0.25rem;
+		}
+		table {
+			margin: 1rem 0;
+		}
+	</style>
+</head>
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+<body>
+	<h1>TECHNOPRENEUR</h1>
+	<nav>
+		<a href="/">Home</a>
+		@auth
+		<a href="{{ route('dashboard.index') }}">Dashboard</a>
+		<form method="POST" action="{{ route('logout') }}">
+			@csrf
+			<input type="submit" value="logout"/>
+		</form>
+		@else
+		<a href="{{ route('login') }}">Login</a>
+		<a href="{{ route('register') }}">Register</a>
+		@endauth
+	</nav>
+	@yield("content")
+</body>
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-
-        <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
-    </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
-            @include('layouts.navigation')
-
-            <!-- Page Heading -->
-            <header class="bg-white shadow">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    {{ $header }}
-                </div>
-            </header>
-
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
-        </div>
-    </body>
 </html>
