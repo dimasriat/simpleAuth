@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Ini Judul</title>	
+	<title>Simple Page</title>	
 	<style>
 		select, textarea, input {
 			margin: 0.5rem 0;
@@ -20,7 +20,7 @@
 </head>
 
 <body>
-	<h1>TECHNOPRENEUR</h1>
+	<h1>Simple Auth</h1>
 	<nav>
 		<a href="/">Home</a>
 		@auth

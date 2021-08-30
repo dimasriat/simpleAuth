@@ -1,7 +1,7 @@
 @extends("layouts.app")
 
 @section("content")
-<h2>Ganti Password yuk</h2>
+<h2>RESET PASSWORD</h2>
 <form method="POST" action="{{ route('password.update') }}">
 	@csrf
 	<div>

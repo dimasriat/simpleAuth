@@ -2,5 +2,5 @@
 
 @section("content")
 <h2>Landing Page</h2>
-<p>Ini adalah bakal calon landing page yang cantik</p>
+<p>Ini adalah halaman landing page</p>
 @endsection

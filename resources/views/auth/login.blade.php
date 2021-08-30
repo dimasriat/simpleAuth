@@ -1,7 +1,7 @@
 @extends("layouts.app")
 
 @section("content")
-<h2>LOGIN DULU BOSQUE</h2>
+<h2>LOGIN</h2>
 <form method="POST" action="{{ route('login') }}">
 	@csrf
 	<div>

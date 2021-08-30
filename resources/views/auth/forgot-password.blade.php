@@ -1,7 +1,7 @@
 @extends("layouts.app")
 
 @section("content")
-<h2>PIKUN BOSQUE?</h2>
+<h2>LUPA PASSWORD</h2>
 <form method="POST" action="{{ route('password.email') }}">
 	@csrf
 	<div>
