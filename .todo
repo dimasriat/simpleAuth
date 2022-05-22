@@ -1,0 +1,14 @@
+1. buat project login signin baru ✅
+2. buat crudnya ✅
+3. buat halaman usernya ✅
+4. hias halaman admin ✅
+5. buat dropdown form dan active page admin ✅
+6. buat grafik yang baru ✅
+-----
+1. buat normalisasinya
+2. terapkan di project dengan branch yang berbeda
+
+
+-----
+
+[{"id":2,"nip":"1948110520181001","status_pegawai":"Purna Tugas","unit":"Fakultas Kedokteran","jenis_kelamin":"Laki Laki","jenis_staff":"tenaga-pendidik"},{"id":3,"nip":"196010081985031001","status_pegawai":"PNS","unit":"Fakultas Pertanian","jenis_kelamin":"Laki Laki","jenis_staff":"tenaga-pendidik"},...]
