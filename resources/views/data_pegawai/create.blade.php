@@ -10,48 +10,48 @@
 		<input id="nip" type="text" name="nip" value="" />
 	</div>
 	<div>
-		<label for="status_pegawai">Status Pegawai:</label><br />
-		<select name="status_pegawai" id="status_pegawai">
-			<option value="Purna Tugas">Purna Tugas</option>
-			<option value="PNS">PNS</option>
-			<option value="Kontrak Professional">Kontrak Professional</option>
-			<option value="Non PNS">Non PNS</option>
-			<option value="CPNS">CPNS</option>
-			<option value="Calon Non PNS">Calon Non PNS</option>
+		<label for="id_unit">Unit:</label><br />
+		<select name="id_unit" id="id_unit">
+			<option value="1">Fakultas Kedokteran</option>
+			<option value="2">Fakultas Pertanian</option>
+			<option value="3">Fakultas KIP</option>
+			<option value="4">Fakultas MIPA</option>
+			<option value="5">Fakultas Ekonomi dan Bisnis</option>
+			<option value="6">Fakultas Hukum</option>
+			<option value="7">Fakultas Ilmu Sosial dan Politik</option>
+			<option value="8">Fakultas Ilmu Budaya</option>
+			<option value="9">Fakultas Keolahragaan</option>
+			<option value="10">Fakultas Teknik</option>
+			<option value="11">Fakultas Seni Rupa dan Desain</option>
+			<option value="12">Sekolah Vokasi</option>
+			<option value="13">Sekolah Pascasarjana</option>
+			<option value="14">Kantor Pusat</option>
+			<option value="15">Rumah Sakit</option>
 		</select>
 	</div>
 	<div>
-		<label for="unit">Unit:</label><br />
-		<select name="unit" id="unit">
-			<option value="Fakultas KIP">Fakultas KIP</option>
-			<option value="Fakultas Pertanian">Fakultas Pertanian</option>
-			<option value="Fakultas Kedokteran">Fakultas Kedokteran</option>
-			<option value="Fakultas MIPA">Fakultas MIPA</option>
-			<option value="Fakultas Ekonomi dan Bisnis">Fakultas Ekonomi dan Bisnis</option>
-			<option value="Fakultas Hukum">Fakultas Hukum</option>
-			<option value="Fakultas Ilmu Sosial dan Politik">Fakultas Ilmu Sosial dan Politik</option>
-			<option value="Fakultas Ilmu Budaya">Fakultas Ilmu Budaya</option>
-			<option value="Fakultas Keolahragaan">Fakultas Keolahragaan</option>
-			<option value="Fakultas Teknik">Fakultas Teknik</option>
-			<option value="Fakultas Seni Rupa dan Desain">Fakultas Seni Rupa dan Desain</option>
-			<option value="Sekolah Vokasi">Sekolah Vokasi</option>
-			<option value="Sekolah Pascasarjana">Sekolah Pascasarjana</option>
-			<option value="Kantor Pusat">Kantor Pusat</option>
-			<option value="Rumah Sakit">Rumah Sakit</option>
+		<label for="id_status_pegawai">Status Pegawai:</label><br />
+		<select name="id_status_pegawai" id="id_status_pegawai">
+			<option value="1">Purna Tugas</option>
+			<option value="2">PNS</option>
+			<option value="3">Kontrak Profesional</option>
+			<option value="4">Non PNS</option>
+			<option value="5">CPNS</option>
+			<option value="6">Calon Non PNS</option>
 		</select>
 	</div>
 	<div>
-		<label for="jenis_kelamin">Jenis Kelamin:</label><br />
-		<select name="jenis_kelamin" id="jenis_kelamin">
-			<option value="Laki Laki">Laki Laki</option>
-			<option value="Perempuan">Perempuan</option>
+		<label for="id_jenis_kelamin">Jenis Kelamin:</label><br />
+		<select name="id_jenis_kelamin" id="id_jenis_kelamin">
+			<option value="1">Laki Laki</option>
+			<option value="2">Perempuan</option>
 		</select>
 	</div>
 	<div>
-		<label for="jenis_staff">Jenis Staff:</label><br />
-		<select name="jenis_staff" id="jenis_staff">
-			<option value="tenaga-pendidik">Tenaga Pendidik</option>
-			<option value="tenaga-kependidikan">Tenaga Kependidikan</option>
+		<label for="id_jenis_staff">Jenis Staff:</label><br />
+		<select name="id_jenis_staff" id="id_jenis_staff">
+			<option value="1">Tenaga Pendidik</option>
+			<option value="2">Tenaga Kependidikan</option>
 		</select>
 	</div>
 	<input type="submit" name="create" value="create" />

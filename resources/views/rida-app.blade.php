@@ -26,55 +26,55 @@
                 }
             @endphp
             <form method="GET" action="{{ route('rida.app') }}">
-                <div>
-                    <label for="status_pegawai">Status Pegawai:</label><br />
-                    <select name="status_pegawai" id="status_pegawai">
-			            <option value="">Semua Kategori</option>
-                        <option value="Purna Tugas" {{ isSelectedValue($request->input('status_pegawai'), 'Purna Tugas') }}>Purna Tugas</option>
-                        <option value="PNS" {{ isSelectedValue($request->input('status_pegawai'), 'PNS') }}>PNS</option>
-                        <option value="Kontrak Professional" {{ isSelectedValue($request->input('status_pegawai'), 'Kontrak Professional') }}>Kontrak Professional</option>
-                        <option value="Non PNS" {{ isSelectedValue($request->input('status_pegawai'), 'Non PNS') }}>Non PNS</option>
-                        <option value="CPNS" {{ isSelectedValue($request->input('status_pegawai'), 'CPNS') }}>CPNS</option>
-                        <option value="Calon Non PNS" {{ isSelectedValue($request->input('status_pegawai'), 'Calon Non PNS') }}>Calon Non PNS</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="unit">Unit:</label><br />
-                    <select name="unit" id="unit">
-			            <option value="">Semua Kategori</option>
-                        <option value="Fakultas KIP"  {{ isSelectedValue($request->input('unit'), 'Fakultas KIP') }}>Fakultas KIP</option>
-                        <option value="Fakultas Pertanian"  {{ isSelectedValue($request->input('unit'), 'Fakultas Pertanian') }}>Fakultas Pertanian</option>
-                        <option value="Fakultas Kedokteran"  {{ isSelectedValue($request->input('unit'), 'Fakultas Kedokteran') }}>Fakultas Kedokteran</option>
-                        <option value="Fakultas MIPA"  {{ isSelectedValue($request->input('unit'), 'Fakultas MIPA') }}>Fakultas MIPA</option>
-                        <option value="Fakultas Ekonomi dan Bisnis"  {{ isSelectedValue($request->input('unit'), 'Fakultas Ekonomi dan Bisnis') }}>Fakultas Ekonomi dan Bisnis</option>
-                        <option value="Fakultas Hukum"  {{ isSelectedValue($request->input('unit'), 'Fakultas Hukum') }}>Fakultas Hukum</option>
-                        <option value="Fakultas Ilmu Sosial dan Politik"  {{ isSelectedValue($request->input('unit'), 'Fakultas Ilmu Sosial dan Politik') }}>Fakultas Ilmu Sosial dan Politik</option>
-                        <option value="Fakultas Ilmu Budaya"  {{ isSelectedValue($request->input('unit'), 'Fakultas Ilmu Budaya') }}>Fakultas Ilmu Budaya</option>
-                        <option value="Fakultas Keolahragaan"  {{ isSelectedValue($request->input('unit'), 'Fakultas Keolahragaan') }}>Fakultas Keolahragaan</option>
-                        <option value="Fakultas Teknik"  {{ isSelectedValue($request->input('unit'), 'Fakultas Teknik') }}>Fakultas Teknik</option>
-                        <option value="Fakultas Seni Rupa dan Desain"  {{ isSelectedValue($request->input('unit'), 'Fakultas Seni Rupa dan Desain') }}>Fakultas Seni Rupa dan Desain</option>
-                        <option value="Sekolah Vokasi"  {{ isSelectedValue($request->input('unit'), 'Sekolah Vokasi') }}>Sekolah Vokasi</option>
-                        <option value="Sekolah Pascasarjana"  {{ isSelectedValue($request->input('unit'), 'Sekolah Pascasarjana') }}>Sekolah Pascasarjana</option>
-                        <option value="Kantor Pusat"  {{ isSelectedValue($request->input('unit'), 'Kantor Pusat') }}>Kantor Pusat</option>
-                        <option value="Rumah Sakit"  {{ isSelectedValue($request->input('unit'), 'Rumah Sakit') }}>Rumah Sakit</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="jenis_kelamin">Jenis Kelamin:</label><br />
-                    <select name="jenis_kelamin" id="jenis_kelamin">
-			            <option value="">Semua Kategori</option>
-                        <option value="Laki Laki" {{ isSelectedValue($request->input('jenis_kelamin'), 'Laki Laki') }}>Laki Laki</option>
-                        <option value="Perempuan" {{ isSelectedValue($request->input('jenis_kelamin'), 'Perempuan') }}>Perempuan</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="jenis_staff">Jenis Staff:</label><br />
-                    <select name="jenis_staff" id="jenis_staff">
-			            <option value="">Semua Kategori</option>
-                        <option value="tenaga-pendidik" {{ isSelectedValue($request->input('jenis_staff'), 'tenaga-pendidik') }}>Tenaga Pendidik</option>
-                        <option value="tenaga-kependidikan" {{ isSelectedValue($request->input('jenis_staff'), 'tenaga-kependidikan') }}>Tenaga Kependidikan</option>
-                    </select>
-                </div>
+            <div>
+                <label for="unit">Unit:</label><br />
+                <select name="unit" id="unit">
+                    <option value="">Semua Kategori</option>
+                    <option value="1"  {{ isSelectedValue($request->input('unit'), '1') }}>Fakultas Kedokteran</option>
+                    <option value="2"  {{ isSelectedValue($request->input('unit'), '2') }}>Fakultas Pertanian</option>
+                    <option value="3"  {{ isSelectedValue($request->input('unit'), '3') }}>Fakultas KIP</option>
+                    <option value="4"  {{ isSelectedValue($request->input('unit'), '4') }}>Fakultas MIPA</option>
+                    <option value="5"  {{ isSelectedValue($request->input('unit'), '5') }}>Fakultas Ekonomi dan Bisnis</option>
+                    <option value="6"  {{ isSelectedValue($request->input('unit'), '6') }}>Fakultas Hukum</option>
+                    <option value="7"  {{ isSelectedValue($request->input('unit'), '7') }}>Fakultas Ilmu Sosial dan Politik</option>
+                    <option value="8"  {{ isSelectedValue($request->input('unit'), '8') }}>Fakultas Ilmu Budaya</option>
+                    <option value="9"  {{ isSelectedValue($request->input('unit'), '9') }}>Fakultas Keolahragaan</option>
+                    <option value="10"  {{ isSelectedValue($request->input('unit'), '10') }}>Fakultas Teknik</option>
+                    <option value="11"  {{ isSelectedValue($request->input('unit'), '11') }}>Fakultas Seni Rupa dan Desain</option>
+                    <option value="12"  {{ isSelectedValue($request->input('unit'), '12') }}>Sekolah Vokasi</option>
+                    <option value="13"  {{ isSelectedValue($request->input('unit'), '13') }}>Sekolah Pascasarjana</option>
+                    <option value="14"  {{ isSelectedValue($request->input('unit'), '14') }}>Kantor Pusat</option>
+                    <option value="15"  {{ isSelectedValue($request->input('unit'), '15') }}>Rumah Sakit</option>
+                </select>
+            </div>
+            <div>
+                <label for="status_pegawai">Status Pegawai:</label><br />
+                <select name="status_pegawai" id="status_pegawai">
+                    <option value="">Semua Kategori</option>
+                    <option value="1"  {{ isSelectedValue($request->input('status_pegawai'), '1') }}>Purna Tugas</option>
+                    <option value="2"  {{ isSelectedValue($request->input('status_pegawai'), '2') }}>PNS</option>
+                    <option value="3"  {{ isSelectedValue($request->input('status_pegawai'), '3') }}>Kontrak Profesional</option>
+                    <option value="4"  {{ isSelectedValue($request->input('status_pegawai'), '4') }}>Non PNS</option>
+                    <option value="5"  {{ isSelectedValue($request->input('status_pegawai'), '5') }}>CPNS</option>
+                    <option value="6"  {{ isSelectedValue($request->input('status_pegawai'), '6') }}>Calon Non PNS</option>
+                </select>
+            </div>
+            <div>
+                <label for="jenis_kelamin">Jenis Kelamin:</label><br />
+                <select name="jenis_kelamin" id="jenis_kelamin">
+                    <option value="">Semua Kategori</option>
+                    <option value="1"  {{ isSelectedValue($request->input('jenis_kelamin'), '1') }}>Laki Laki</option>
+                    <option value="2"  {{ isSelectedValue($request->input('jenis_kelamin'), '2') }}>Perempuan</option>
+                </select>
+            </div>
+            <div>
+                <label for="jenis_staff">Jenis Staff:</label><br />
+                <select name="jenis_staff" id="jenis_staff">
+                    <option value="">Semua Kategori</option>
+                    <option value="1"  {{ isSelectedValue($request->input('jenis_staff'), '1') }}>Tenaga Pendidik</option>
+                    <option value="2"  {{ isSelectedValue($request->input('jenis_staff'), '2') }}>Tenaga Kependidikan</option>
+                </select>
+            </div>
                 <input type="submit" name="filter" value="Filter" />
             </form>
         </div>

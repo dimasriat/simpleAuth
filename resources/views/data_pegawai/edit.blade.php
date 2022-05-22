@@ -15,48 +15,48 @@
 		<input id="nip" type="text" name="nip" value="{{ $pegawai->nip }}" />
 	</div>
 	<div>
-		<label for="status_pegawai">Status Pegawai:</label><br />
-		<select name="status_pegawai" id="status_pegawai">
-			<option value="Purna Tugas" {{ isSelectedValue($pegawai->status_pegawai, 'Purna Tugas') }}>Purna Tugas</option>
-			<option value="PNS" {{ isSelectedValue($pegawai->status_pegawai, 'PNS') }}>PNS</option>
-			<option value="Kontrak Professional" {{ isSelectedValue($pegawai->status_pegawai, 'Kontrak Professional') }}>Kontrak Professional</option>
-			<option value="Non PNS" {{ isSelectedValue($pegawai->status_pegawai, 'Non PNS') }}>Non PNS</option>
-			<option value="CPNS" {{ isSelectedValue($pegawai->status_pegawai, 'CPNS') }}>CPNS</option>
-			<option value="Calon Non PNS" {{ isSelectedValue($pegawai->status_pegawai, 'Calon Non PNS') }}>Calon Non PNS</option>
+		<label for="id_unit">Unit:</label><br />
+		<select name="id_unit" id="id_unit">
+			<option value="1"  {{ isSelectedValue($pegawai->id_unit, '1') }}>Fakultas Kedokteran</option>
+			<option value="2"  {{ isSelectedValue($pegawai->id_unit, '2') }}>Fakultas Pertanian</option>
+			<option value="3"  {{ isSelectedValue($pegawai->id_unit, '3') }}>Fakultas KIP</option>
+			<option value="4"  {{ isSelectedValue($pegawai->id_unit, '4') }}>Fakultas MIPA</option>
+			<option value="5"  {{ isSelectedValue($pegawai->id_unit, '5') }}>Fakultas Ekonomi dan Bisnis</option>
+			<option value="6"  {{ isSelectedValue($pegawai->id_unit, '6') }}>Fakultas Hukum</option>
+			<option value="7"  {{ isSelectedValue($pegawai->id_unit, '7') }}>Fakultas Ilmu Sosial dan Politik</option>
+			<option value="8"  {{ isSelectedValue($pegawai->id_unit, '8') }}>Fakultas Ilmu Budaya</option>
+			<option value="9"  {{ isSelectedValue($pegawai->id_unit, '9') }}>Fakultas Keolahragaan</option>
+			<option value="10"  {{ isSelectedValue($pegawai->id_unit, '10') }}>Fakultas Teknik</option>
+			<option value="11"  {{ isSelectedValue($pegawai->id_unit, '11') }}>Fakultas Seni Rupa dan Desain</option>
+			<option value="12"  {{ isSelectedValue($pegawai->id_unit, '12') }}>Sekolah Vokasi</option>
+			<option value="13"  {{ isSelectedValue($pegawai->id_unit, '13') }}>Sekolah Pascasarjana</option>
+			<option value="14"  {{ isSelectedValue($pegawai->id_unit, '14') }}>Kantor Pusat</option>
+			<option value="15"  {{ isSelectedValue($pegawai->id_unit, '15') }}>Rumah Sakit</option>
 		</select>
 	</div>
 	<div>
-		<label for="unit">Unit:</label><br />
-		<select name="unit" id="unit">
-			<option value="Fakultas KIP"  {{ isSelectedValue($pegawai->unit, 'Fakultas KIP') }}>Fakultas KIP</option>
-			<option value="Fakultas Pertanian"  {{ isSelectedValue($pegawai->unit, 'Fakultas Pertanian') }}>Fakultas Pertanian</option>
-			<option value="Fakultas Kedokteran"  {{ isSelectedValue($pegawai->unit, 'Fakultas Kedokteran') }}>Fakultas Kedokteran</option>
-			<option value="Fakultas MIPA"  {{ isSelectedValue($pegawai->unit, 'Fakultas MIPA') }}>Fakultas MIPA</option>
-			<option value="Fakultas Ekonomi dan Bisnis"  {{ isSelectedValue($pegawai->unit, 'Fakultas Ekonomi dan Bisnis') }}>Fakultas Ekonomi dan Bisnis</option>
-			<option value="Fakultas Hukum"  {{ isSelectedValue($pegawai->unit, 'Fakultas Hukum') }}>Fakultas Hukum</option>
-			<option value="Fakultas Ilmu Sosial dan Politik"  {{ isSelectedValue($pegawai->unit, 'Fakultas Ilmu Sosial dan Politik') }}>Fakultas Ilmu Sosial dan Politik</option>
-			<option value="Fakultas Ilmu Budaya"  {{ isSelectedValue($pegawai->unit, 'Fakultas Ilmu Budaya') }}>Fakultas Ilmu Budaya</option>
-			<option value="Fakultas Keolahragaan"  {{ isSelectedValue($pegawai->unit, 'Fakultas Keolahragaan') }}>Fakultas Keolahragaan</option>
-			<option value="Fakultas Teknik"  {{ isSelectedValue($pegawai->unit, 'Fakultas Teknik') }}>Fakultas Teknik</option>
-			<option value="Fakultas Seni Rupa dan Desain"  {{ isSelectedValue($pegawai->unit, 'Fakultas Seni Rupa dan Desain') }}>Fakultas Seni Rupa dan Desain</option>
-			<option value="Sekolah Vokasi"  {{ isSelectedValue($pegawai->unit, 'Sekolah Vokasi') }}>Sekolah Vokasi</option>
-			<option value="Sekolah Pascasarjana"  {{ isSelectedValue($pegawai->unit, 'Sekolah Pascasarjana') }}>Sekolah Pascasarjana</option>
-			<option value="Kantor Pusat"  {{ isSelectedValue($pegawai->unit, 'Kantor Pusat') }}>Kantor Pusat</option>
-			<option value="Rumah Sakit"  {{ isSelectedValue($pegawai->unit, 'Rumah Sakit') }}>Rumah Sakit</option>
+		<label for="id_status_pegawai">Status Pegawai:</label><br />
+		<select name="id_status_pegawai" id="id_status_pegawai">
+			<option value="1"  {{ isSelectedValue($pegawai->id_status_pegawai, '1') }}>Purna Tugas</option>
+			<option value="2"  {{ isSelectedValue($pegawai->id_status_pegawai, '2') }}>PNS</option>
+			<option value="3"  {{ isSelectedValue($pegawai->id_status_pegawai, '3') }}>Kontrak Profesional</option>
+			<option value="4"  {{ isSelectedValue($pegawai->id_status_pegawai, '4') }}>Non PNS</option>
+			<option value="5"  {{ isSelectedValue($pegawai->id_status_pegawai, '5') }}>CPNS</option>
+			<option value="6"  {{ isSelectedValue($pegawai->id_status_pegawai, '6') }}>Calon Non PNS</option>
 		</select>
 	</div>
 	<div>
-		<label for="jenis_kelamin">Jenis Kelamin:</label><br />
-		<select name="jenis_kelamin" id="jenis_kelamin">
-			<option value="Laki Laki" {{ isSelectedValue($pegawai->jenis_kelamin, 'Laki Laki') }}>Laki Laki</option>
-			<option value="Perempuan" {{ isSelectedValue($pegawai->jenis_kelamin, 'Perempuan') }}>Perempuan</option>
+		<label for="id_jenis_kelamin">Jenis Kelamin:</label><br />
+		<select name="id_jenis_kelamin" id="id_jenis_kelamin">
+			<option value="1"  {{ isSelectedValue($pegawai->id_jenis_kelamin, '1') }}>Laki Laki</option>
+			<option value="2"  {{ isSelectedValue($pegawai->id_jenis_kelamin, '2') }}>Perempuan</option>
 		</select>
 	</div>
 	<div>
-		<label for="jenis_staff">Jenis Staff:</label><br />
-		<select name="jenis_staff" id="jenis_staff">
-			<option value="tenaga-pendidik" {{ isSelectedValue($pegawai->jenis_staff, 'tenaga-pendidik') }}>Tenaga Pendidik</option>
-			<option value="tenaga-kependidikan" {{ isSelectedValue($pegawai->jenis_staff, 'tenaga-kependidikan') }}>Tenaga Kependidikan</option>
+		<label for="id_jenis_staff">Jenis Staff:</label><br />
+		<select name="id_jenis_staff" id="id_jenis_staff">
+			<option value="1"  {{ isSelectedValue($pegawai->id_jenis_staff, '1') }}>Tenaga Pendidik</option>
+			<option value="2"  {{ isSelectedValue($pegawai->id_jenis_staff, '2') }}>Tenaga Kependidikan</option>
 		</select>
 	</div>
 	<input type="submit" name="update" value="update" />

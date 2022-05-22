@@ -13,6 +13,11 @@ class DataPegawaiController extends Controller
 	public function index()
 	{
 		$data_pegawai = DB::table('data_pegawai')
+			->join('status_pegawai', 'data_pegawai.id_status_pegawai', '=','status_pegawai.id')
+			->join('unit', 'data_pegawai.id_unit', '=','unit.id')
+			->join('jenis_kelamin', 'data_pegawai.id_jenis_kelamin', '=','jenis_kelamin.id')
+			->join('jenis_staff', 'data_pegawai.id_jenis_staff', '=','jenis_staff.id')
+			->select('data_pegawai.id', 'nip', 'status_pegawai', 'unit', 'jenis_kelamin', 'jenis_staff')
 			->orderBy('id', 'ASC')
 			->get();
 		return view('data_pegawai.index', ['data_pegawai' => $data_pegawai]);
@@ -28,10 +33,10 @@ class DataPegawaiController extends Controller
 		DB::table('data_pegawai')
 			->insert([
 				'nip' => $request->input('nip'),
-				'status_pegawai' => $request->input('status_pegawai'),
-				'unit' => $request->input('unit'),
-				'jenis_kelamin' => $request->input('jenis_kelamin'),
-				'jenis_staff' => $request->input('jenis_staff'),
+				'id_status_pegawai' => $request->input('id_status_pegawai'),
+				'id_unit' => $request->input('id_unit'),
+				'id_jenis_kelamin' => $request->input('id_jenis_kelamin'),
+				'id_jenis_staff' => $request->input('id_jenis_staff'),
 			]);
 		return redirect()->route('data_pegawai.index');
 	}
@@ -51,10 +56,10 @@ class DataPegawaiController extends Controller
 			->where('id', '=', $id)
 			->update([
 				'nip' => $request->input('nip'),
-				'status_pegawai' => $request->input('status_pegawai'),
-				'unit' => $request->input('unit'),
-				'jenis_kelamin' => $request->input('jenis_kelamin'),
-				'jenis_staff' => $request->input('jenis_staff'),
+				'id_status_pegawai' => $request->input('id_status_pegawai'),
+				'id_unit' => $request->input('id_unit'),
+				'id_jenis_kelamin' => $request->input('id_jenis_kelamin'),
+				'id_jenis_staff' => $request->input('id_jenis_staff'),
 			]);
 		return redirect()->route('data_pegawai.index');
 	}
