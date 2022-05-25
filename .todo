@@ -12,3 +12,9 @@
 -----
 
 [{"id":2,"nip":"1948110520181001","status_pegawai":"Purna Tugas","unit":"Fakultas Kedokteran","jenis_kelamin":"Laki Laki","jenis_staff":"tenaga-pendidik"},{"id":3,"nip":"196010081985031001","status_pegawai":"PNS","unit":"Fakultas Pertanian","jenis_kelamin":"Laki Laki","jenis_staff":"tenaga-pendidik"},...]
+
+-----
+
+unit dan jenjang gaada semua kategori ✅
+tabel nip dll diganti tabel template
+tabel sql tambahi jenjang pendidikan ✅

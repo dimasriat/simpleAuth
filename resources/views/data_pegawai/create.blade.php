@@ -48,6 +48,25 @@
 		</select>
 	</div>
 	<div>
+		<label for="id_jenjang_pendidikan">Jenjang Pendidikan:</label><br />
+		<select name="id_jenjang_pendidikan" id="id_jenjang_pendidikan">
+			<option value="1">S3</option>
+			<option value="2">Sp-1</option>
+			<option value="3">Sp-2</option>
+			<option value="4">S2</option>
+			<option value="5">Sp-1(K)</option>
+			<option value="6">PROFESI</option>
+			<option value="7">S1</option>
+			<option value="8">SMU/SLTA</option>
+			<option value="9">D3</option>
+			<option value="10">SMP/SLTP</option>
+			<option value="11">SD</option>
+			<option value="12">D1</option>
+			<option value="13">D4</option>
+			<option value="14">D2</option>
+		</select>
+	</div>
+	<div>
 		<label for="id_jenis_staff">Jenis Staff:</label><br />
 		<select name="id_jenis_staff" id="id_jenis_staff">
 			<option value="1">Tenaga Pendidik</option>

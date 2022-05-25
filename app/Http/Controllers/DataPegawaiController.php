@@ -16,8 +16,9 @@ class DataPegawaiController extends Controller
 			->join('status_pegawai', 'data_pegawai.id_status_pegawai', '=','status_pegawai.id')
 			->join('unit', 'data_pegawai.id_unit', '=','unit.id')
 			->join('jenis_kelamin', 'data_pegawai.id_jenis_kelamin', '=','jenis_kelamin.id')
+			->join('jenjang_pendidikan', 'data_pegawai.id_jenjang_pendidikan', '=','jenjang_pendidikan.id')
 			->join('jenis_staff', 'data_pegawai.id_jenis_staff', '=','jenis_staff.id')
-			->select('data_pegawai.id', 'nip', 'status_pegawai', 'unit', 'jenis_kelamin', 'jenis_staff')
+			->select('data_pegawai.id', 'nip', 'status_pegawai', 'unit', 'jenis_kelamin', 'jenjang_pendidikan', 'jenis_staff')
 			->orderBy('id', 'ASC')
 			->get();
 		return view('data_pegawai.index', ['data_pegawai' => $data_pegawai]);
@@ -36,6 +37,7 @@ class DataPegawaiController extends Controller
 				'id_status_pegawai' => $request->input('id_status_pegawai'),
 				'id_unit' => $request->input('id_unit'),
 				'id_jenis_kelamin' => $request->input('id_jenis_kelamin'),
+				'id_jenjang_pendidikan' => $request->input('id_jenjang_pendidikan'),
 				'id_jenis_staff' => $request->input('id_jenis_staff'),
 			]);
 		return redirect()->route('data_pegawai.index');
@@ -59,6 +61,7 @@ class DataPegawaiController extends Controller
 				'id_status_pegawai' => $request->input('id_status_pegawai'),
 				'id_unit' => $request->input('id_unit'),
 				'id_jenis_kelamin' => $request->input('id_jenis_kelamin'),
+				'id_jenjang_pendidikan' => $request->input('id_jenjang_pendidikan'),
 				'id_jenis_staff' => $request->input('id_jenis_staff'),
 			]);
 		return redirect()->route('data_pegawai.index');

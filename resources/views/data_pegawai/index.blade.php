@@ -18,6 +18,7 @@
 				'Status Pegawai', 
 				'Unit', 
 				"Jenis Kelamin", 
+				"Jenjang Pendidikan", 
 				"Jenis Staff",
 				{
 					name: "Actions",
