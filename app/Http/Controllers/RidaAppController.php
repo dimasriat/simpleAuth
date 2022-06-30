@@ -13,6 +13,11 @@ class RidaAppController extends Controller
 	{
 		return view('welcome');
 	}
+	
+	public function intro()
+	{
+		return view('rida-intro');
+	}
 
 	public function app(Request $request)
 	{
@@ -51,6 +56,22 @@ class RidaAppController extends Controller
 			->orderBy('id', 'ASC')
 			->get();
 			// dd($data_pegawai[0]);
-		return view('rida-app', ['data_pegawai' => $data_pegawai, 'request' => $request]);
+		$periode = $request->input('periode') ? $request->input('periode') : date('Y');
+		return view('rida-app', ['data_pegawai' => $data_pegawai, 'request' => $request, 'periode' => $periode]);
+	}
+
+	
+	public function h_indeks(Request $request)
+	{
+		
+		$condition = array();
+		if ($request->input('unit')) {
+			array_push($condition, ['id_unit', '=', (int) $request->input('unit')]);
+		}
+		if (!$request->input('unit')) {
+			array_push($condition, ['id_unit', '=', 0]);
+		}
+		// dd($condition);
+		return view('rida-h-indeks', ['request' => $request]);
 	}
 }

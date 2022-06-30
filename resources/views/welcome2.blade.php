@@ -108,17 +108,20 @@
           <div class="col-lg-6">
             <div class="hero-content">
               <h1 class="wow fadeInUp" data-wow-delay=".4s">
-                Aplikasi RIDA
+                PORTAL RIDA
               </h1>
               <p class="wow fadeInUp" data-wow-delay=".6s">
                 Riset Inovasi Dalam Angka
               </p>
               <a
-              href="#about2"
+              href="{{ route('rida.app') }}"
                 class="main-btn border-btn btn-hover wow fadeInUp"
                 data-wow-delay=".6s"
                 >Buka Aplikasi
-                </a>           
+                </a>             >
+              <a href="#features" class="scroll-bottom">
+                <i class="lni lni-arrow-down"></i
+              ></a>
             </div>
           </div>
           <div class="col-lg-6">
@@ -160,30 +163,37 @@
     <!-- ======== about-section end ======== -->
 
     <!-- ======== about2-section start ======== -->
-    <section id="about2" class="about-section pt-150">
+    <section id="about" class="about-section pt-150">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-xl-6 col-lg-6">
             <div class="about-content">
               <div class="section-title mb-30">
                 <h2 class="mb-25 wow fadeInUp" data-wow-delay=".2s">
-                  Digitalisasi Riset Inovasi Dalam Angka
+                  Easy to Use with Tons of Awesome Features
                 </h2>
                 <p class="wow fadeInUp" data-wow-delay=".4s">
-                  Untuk dapat mengakses aplikasi RIDA silahkan klik tombol selengkapnya dibawah ini.
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                  aliquyam erat, sed diam voluptua.
                 </p>
               </div>
-                <a
-                href="{{ route('rida.intro') }}"
-                class="main-btn btn-hover"
+              <ul>
+                <li>Quick Access</li>
+                <li>Easily to Manage</li>
+                <li>24/7 Support</li>
+              </ul>
+              <a
+                href="javascript:void(0)"
+                class="main-btn btn-hover border-btn wow fadeInUp"
                 data-wow-delay=".6s"
-                >Selengkapnya</a
+                >Learn More</a
               >
             </div>
           </div>
           <div class="col-xl-6 col-lg-6 order-first order-lg-last">
             <div class="about-img-2">
-              <!-- <img src="assets/img/about/about-2.png" alt="" class="w-100" /> -->
+              <img src="assets/img/about/about-2.png" alt="" class="w-100" />
               <img
                 src="assets/img/about/about-right-shape.svg"
                 alt=""
@@ -202,7 +212,7 @@
     <!-- ======== about2-section end ======== -->
 
     <!-- ======== feature-section start ======== -->
-    <!-- <section id="why" class="feature-extended-section pt-100">
+    <section id="why" class="feature-extended-section pt-100">
       <div class="feature-extended-wrapper">
         <div class="container">
           <div class="row justify-content-center">
@@ -307,11 +317,11 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
     <!-- ======== feature-section end ======== -->
 
     <!-- ======== subscribe-section start ======== -->
-    <!-- <section id="contact" class="subscribe-section pt-120">
+    <section id="contact" class="subscribe-section pt-120">
       <div class="container">
         <div class="subscribe-wrapper img-bg">
           <div class="row align-items-center">
@@ -340,7 +350,7 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
     <!-- ======== subscribe-section end ======== -->
 
     <!-- ======== footer start ======== -->
@@ -356,8 +366,8 @@
                   </a>
                 </div>
                 <p class="desc mb-30 text-white">
-                  Untuk mendapatkan informasi terbaru terkait aktivitas Riset dan Inovasi UNS
-                  <br>Anda dapat mengikuti kami melalui sosial media di bawah Ini.
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  dinonumy eirmod tempor invidunt.
                 </p>
                 <ul class="socials">
                   <li>
@@ -367,39 +377,36 @@
                   </li>
                   <li>
                     <a href="jvascript:void(0)">
+                      <i class="lni lni-twitter-filled"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="jvascript:void(0)">
                       <i class="lni lni-instagram-filled"></i>
                     </a>
                   </li>
-                  <!-- <li>
-                    <a href="jvascript:void(0)">
-                      <i class="lni lni-twitter-filled"></i>
-                    </a>
-                  </li> -->
-                  <!-- <li>
+                  <li>
                     <a href="jvascript:void(0)">
                       <i class="lni lni-linkedin-original"></i>
                     </a>
-                  </li> -->
+                  </li>
                 </ul>
               </div>
             </div>
 
-            <div class="col">
+            <div class="col-xl-2 col-lg-2 col-md-6">
               <div class="footer-widget">
-                <h3>Tentang Kami</h3>
-                <p class="desc mb-10 text-white">
-                  Untuk info lebih lanjut kunjungi atau hubungi yang tertera di bawah ini.
-                </p>
+                <h3>About Us</h3>
                 <ul class="links">
-                  <li><a href="javascript:void(0)">Email</a></li>
-                  <li><a href="javascript:void(0)">No Telepon <br> </a></li>
-                  <li><a href="javascript:void(0)">Alamat <br>Gedung LPPM UNS Lt. 1 Jl. Ir. Sutami 36A Jebres Surakarta Jawa Tengah 57126</a></li>
-                  <!-- <li><a href="javascript:void(0)">Testimonials</a></li> -->
+                  <li><a href="javascript:void(0)">Home</a></li>
+                  <li><a href="javascript:void(0)">Feature</a></li>
+                  <li><a href="javascript:void(0)">About</a></li>
+                  <li><a href="javascript:void(0)">Testimonials</a></li>
                 </ul>
               </div>
             </div>
 
-            <!-- <div class="col-xl-3 col-lg-3 col-md-6">
+            <div class="col-xl-3 col-lg-3 col-md-6">
               <div class="footer-widget">
                 <h3>Features</h3>
                 <ul class="links">
@@ -409,16 +416,16 @@
                   <li><a href="javascript:void(0)">Refund policy</a></li>
                 </ul>
               </div>
-            </div> -->
+            </div>
 
             <div class="col-xl-3 col-lg-3 col-md-6">
               <div class="footer-widget">
-                <h3>Portal Informasi</h3>
+                <h3>Other Products</h3>
                 <ul class="links">
-                  <li><a href="https://uns.ac.id">Laman UNS</a></li>
-                  <li><a href="https://risnov.uns.ac.id/">Laman RISNOV</a></li>
-                  <!-- <li><a href="jvascript:void(0)">Booking System</a></li>
-                  <li><a href="jvascript:void(0)">Tracking System</a></li> -->
+                  <li><a href="jvascript:void(0)">Accounting Software</a></li>
+                  <li><a href="jvascript:void(0)">Billing Software</a></li>
+                  <li><a href="jvascript:void(0)">Booking System</a></li>
+                  <li><a href="jvascript:void(0)">Tracking System</a></li>
                 </ul>
               </div>
             </div>

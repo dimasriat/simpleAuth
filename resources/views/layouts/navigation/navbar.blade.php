@@ -56,7 +56,7 @@
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
                         <li><a href="/">Home</a></li>    
-                        <li><a href="{{ route('rida.app') }}">RIDA Application</a></li>    
+                        <li><a href="{{ route('rida.app') }}">RIDA</a></li>    
                         <li><a href="{{ route('dashboard.index') }}">Admin</a></li>    
                         </ul>
                     </div>

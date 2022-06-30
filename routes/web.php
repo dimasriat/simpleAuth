@@ -6,7 +6,9 @@ use App\Http\Controllers\RidaAppController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [RidaAppController::class, 'index'])->name('rida.index');
+Route::get('/app/intro', [RidaAppController::class, 'intro'])->name('rida.intro');
 Route::get('/app', [RidaAppController::class, 'app'])->name('rida.app');
+Route::get('/app/h-indeks', [RidaAppController::class, 'h_indeks'])->name('rida.h-indeks');
 
 Route::get('/dashboard', [UserController::class, 'index'])
 	->middleware(['auth'])->name('dashboard.index');
