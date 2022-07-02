@@ -6,6 +6,13 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Http;
+
+function findHIndexByScholarId($id) {
+	$API_KEY = "bf67a3f3c2fc46c942874d48da2a702c56d7186faee99710b7cac253689025c2";
+	$data = Http::get("https://serpapi.com/search.json?engine=google_scholar_author&author_id=". $id . "&api_key=" . $API_KEY);
+	return $data['cited_by']['table'][1]['h_index']['all'];
+}
 
 class RidaAppController extends Controller
 {
@@ -68,10 +75,39 @@ class RidaAppController extends Controller
 		if ($request->input('unit')) {
 			array_push($condition, ['id_unit', '=', (int) $request->input('unit')]);
 		}
-		if (!$request->input('unit')) {
-			array_push($condition, ['id_unit', '=', 0]);
+		$data_peneliti = DB::table('data_peneliti')
+			->join('unit', 'data_peneliti.id_unit', '=','unit.id')
+			->join('jenis_kelamin', 'data_peneliti.id_jenis_kelamin', '=','jenis_kelamin.id')
+			->select('data_peneliti.id', 'nidn', 'scopus_id', 'scholar_id', 'unit', 'id_unit')
+			->orderBy('id', 'ASC')
+			->get();
+		$h_index_value = [];
+		for($i = 0; $i <= 13; $i++) {
+			$h_index_value[$i] = [];
+			for($h = 0; $h <= 22; $h++) {
+				$h_index_value[$i][$h] = 0;
+			}
 		}
-		// dd($condition);
-		return view('rida-h-indeks', ['request' => $request]);
+		$data_peneliti_with_h_index = [];
+		foreach($data_peneliti as $peneliti) {
+			$h_index = findHIndexByScholarId($peneliti->scholar_id);
+			array_push($data_peneliti_with_h_index, [
+				'scholar_id' => $peneliti->scholar_id,
+				'id_unit' => $peneliti->id_unit,
+				'unit' => $peneliti->unit,
+				'h_index' => $h_index
+			]);
+			$h_index_value[0][(int) $h_index]++; // unit == 0 --> all unit total h_index
+			$h_index_value[$peneliti->id_unit][(int) $h_index]++;
+		}
+		// dd($data_peneliti_with_h_index, $h_index_value);
+		// dd([
+		// 	'scholar_id' => $data_peneliti[0]->scholar_id,
+		// 	'h_index' => findHIndexByScholarId($data_peneliti[0]->scholar_id)
+		// ]);
+
+		// $response = Http::get('https://random-data-api.com/api/users/random_user');
+		// dd($response->json());
+		return view('rida-h-indeks', ['request' => $request, 'data_peneliti' => $data_peneliti_with_h_index, 'h_index_value' => $h_index_value]);
 	}
 }

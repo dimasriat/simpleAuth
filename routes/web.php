@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DataPegawaiController;
+use App\Http\Controllers\DataPenelitiController;
 use App\Http\Controllers\RidaAppController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,5 +30,18 @@ Route::put('/data_pegawai/update/{id}', [DataPegawaiController::class, 'update']
 	->middleware(['auth'])->name('data_pegawai.update');
 Route::get('/data_pegawai/delete/{id}', [DataPegawaiController::class, 'delete'])
 	->middleware(['auth'])->name('data_pegawai.delete');
+
+Route::get('/data_peneliti', [DataPenelitiController::class, 'index'])
+	->middleware(['auth'])->name('data_peneliti.index');
+Route::get('/data_peneliti/create', [DataPenelitiController::class, 'create'])
+	->middleware(['auth'])->name('data_peneliti.create');
+Route::post('/data_peneliti/create', [DataPenelitiController::class, 'insert'])
+	->middleware(['auth'])->name('data_peneliti.insert');
+Route::get('/data_peneliti/edit/{id}', [DataPenelitiController::class, 'edit'])
+	->middleware(['auth'])->name('data_peneliti.edit');
+Route::put('/data_peneliti/update/{id}', [DataPenelitiController::class, 'update'])
+	->middleware(['auth'])->name('data_peneliti.update');
+Route::get('/data_peneliti/delete/{id}', [DataPenelitiController::class, 'delete'])
+	->middleware(['auth'])->name('data_peneliti.delete');
 
 require __DIR__.'/auth.php';

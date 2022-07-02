@@ -62,6 +62,7 @@
 			@auth
 			<a href="{{ route('dashboard.index') }}" class="{{ activePath('dashboard') }}">Dashboard</a>
 			<a href="{{ route('data_pegawai.index') }}" class="{{ activePath('data_pegawai') }}">Data Pegawai</a>
+			<a href="{{ route('data_peneliti.index') }}" class="{{ activePath('data_peneliti') }}">Data Peneliti</a>
 			<form method="POST" action="{{ route('logout') }}">
 				@csrf
 				<input type="submit" value="logout"/>
